@@ -6,55 +6,55 @@ const KakaoMap = () => {
     {
       id: '헤키',
       location: [37.556063615306826, 126.90760451927538],
-      rating: 5,
+      rating: '⭐⭐⭐⭐⭐',
       category: ['돈까스', '일식'],
     },
     {
       id: '카와카츠',
       location: [37.554696028909575, 126.91622992846987],
-      rating: 4.5,
+      rating: '⭐⭐⭐⭐',
       category: ['돈까스', '일식'],
     },
     {
       id: '카와카츠 오토코',
       location: [37.55147129649908, 126.91742179463],
-      rating: 4.5,
+      rating: '⭐⭐⭐⭐',
       category: ['돈까스', '일식'],
     },
     {
       id: '카츠바이콘반',
       location: [37.52475285225363, 127.03647213614116],
-      rating: 4,
+      rating: '⭐⭐⭐',
       category: ['돈까스', '일식'],
     },
     {
       id: '호족반',
       location: [37.52539698812291, 127.03673264399191],
-      rating: 5,
+      rating: '⭐⭐⭐⭐⭐',
       category: ['고기'],
     },
     {
       id: '피에프창',
       location: [37.513747094088245, 127.10444892003817],
-      rating: 5,
+      rating: '⭐⭐⭐⭐⭐',
       category: ['프랜차이즈', '고기', '중식'],
     },
     {
       id: '호파스타',
       location: [37.54419475615208, 127.07015693024503],
-      rating: 4.5,
+      rating: '⭐⭐⭐⭐',
       category: ['양식', '파스타'],
     },
     {
       id: '성수족발',
       location: [37.54603665375094, 127.05428243280046],
-      rating: 4.5,
+      rating: '⭐⭐⭐⭐',
       category: ['고기', '족발'],
     },
     {
       id: '오향족발',
       location: [37.563260256763165, 126.97601606124874],
-      rating: 4.5,
+      rating: '⭐⭐⭐⭐',
       category: ['고기', '족발'],
     },
   ];
@@ -68,7 +68,7 @@ const KakaoMap = () => {
       <Map
         level={8}
         center={{ lat: 37.541, lng: 126.986 }}
-        style={{ height: '60vh', borderRadius: '10px', padding: '10' }}
+        style={{ height: '50vh', borderRadius: '10px', padding: '10' }}
       >
         {data.map((place, idx) => {
           return (
@@ -92,10 +92,12 @@ const KakaoMap = () => {
                   카테고리:
                   {data &&
                     data[idx].category.map((item) => {
-                      return item + ' ';
+                      return (
+                        <button className="px-2 py-1 bg-yellow-200 m-2 rounded-lg">{item}</button>
+                      );
                     })}
                 </div>
-                <div className="px-2 tracking-wider">별점:{data && data[idx].rating}점</div>
+                <div className="px-2 tracking-wider">별점:{data && data[idx].rating}</div>
               </div>
             )
           );
