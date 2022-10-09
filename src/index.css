@@ -1,13 +1,15 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.default_outline {
+  @apply outline outline-1 outline-[#EAECEE] rounded-xl;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hover_button {
+  @apply hover:outline-none hover:bg-defaultColor hover:text-white;
+}
+
+.default_button {
+  @apply duration-300 ease-in-out bg-white hover:text-white text-defaultColor outline outline-defaultColor rounded-3xl outline-1 hover:bg-defaultColor;
 }
