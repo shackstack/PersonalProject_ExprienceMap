@@ -1,4 +1,4 @@
-import Navbar from 'components/header/Navbar';
+import Navbar from 'components/navbar/Navbar';
 import KakaoMap from 'components/map/KakaoMap';
 import { Container, Layout } from 'util/GlobalStyle';
 import { useState } from 'react';

@@ -1,6 +1,6 @@
 import UserCard from 'components/card/UserCard';
 import Moon from 'assets/스윙스.jpg';
-import Navbar from 'components/header/Navbar';
+import Navbar from 'components/navbar/Navbar';
 import { Container, Layout } from 'util/GlobalStyle';
 import { Link } from 'react-router-dom';
 
