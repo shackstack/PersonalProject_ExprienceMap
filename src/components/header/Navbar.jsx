@@ -11,15 +11,12 @@ const Navbar = () => {
   };
   return (
     <div>
+      <Logo />
       <div className="w-full flex justify-end">
-        <button
-          onClick={() => onClickModalOpen()}
-          className="fixed text-xl text-[#a19d9d] py-5 px-10"
-        >
+        <button onClick={() => onClickModalOpen()} className="text-xl text-[#a19d9d] px-10">
           로그인
         </button>
       </div>
-      <Logo />
       {modalState && (
         <Modal
           onConfirm={() => setModalState(false)}
