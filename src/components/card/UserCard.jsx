@@ -4,8 +4,8 @@ const UserCard = (props) => {
   return (
     <>
       <StyledCard>
-        <div>
-          <img className="rounded-full p-7" src={props.img && props.img} />
+        <div className=" p-7">
+          <img className="rounded-full shadow-lg shadow-[#aeadac]" src={props.img && props.img} />
         </div>
         <div className="w-full flex justify-center font-bold text-lg">
           {props.name && props.name}
@@ -25,8 +25,8 @@ const StyledCard = styled.div`
   outline-style: solid;
   outline-width: 1px;
   outline-color: #eaecee;
-  background-color: #feeefd;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   position: relative;
   flex-direction: column;
   width: 200px;

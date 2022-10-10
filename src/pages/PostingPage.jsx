@@ -1,7 +1,23 @@
-import Logo from 'components/header/Logo';
+import Logo from 'components/navbar/Homebutton';
+import { useNavigate } from 'react-router-dom';
 import { Container, Layout } from 'util/GlobalStyle';
 
 const PostingPage = () => {
+  const navigate = useNavigate();
+  const category = [
+    '한식',
+    '중식',
+    '일식',
+    '양식',
+    '태국 음식',
+    '닭고기',
+    '소고기',
+    '돼지고기',
+    '면',
+    '태그를',
+    '어떻게',
+    '나누죠',
+  ];
   return (
     <Layout>
       <Container>
@@ -27,6 +43,24 @@ const PostingPage = () => {
           <div className="text-xl mt-7">3. 음식점에 대한 경험을 알려주세요.</div>
           <div className="mt-3 flex">
             <textarea className="w-full rounded-xl mr-4 p-2"></textarea>
+          </div>
+          <div className="text-xl mt-7">4. 음식점의 카테고리를 설정해주세요.</div>
+          <div className="mt-3 flex">
+            {category.map((item) => {
+              return (
+                <button className="py-1 px-3 bg-yellow-300 m-2 rounded-2xl text-[#7c7a7a]">
+                  {item}
+                </button>
+              );
+            })}
+          </div>
+          <div className="w-full flex justify-start">
+            <button
+              className="absolute bottom-0 p-3 bg-orange-300 rounded-2xl"
+              onClick={() => navigate('/')}
+            >
+              나가기
+            </button>
           </div>
           <div className="w-full flex justify-end">
             <button className="absolute bottom-0 p-3 bg-orange-300 rounded-2xl"> 제출하기 </button>
