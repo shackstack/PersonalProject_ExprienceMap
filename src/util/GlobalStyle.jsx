@@ -21,9 +21,9 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Layout = styled.div`
   background-image: url(${Background});
-  max-width: 100vw;
-  max-height: 120vh;
-  min-width: 375px;
+  width: 100vw;
+  height: 120vh;
+  min-width: 550px;
   display: flex;
   justify-content: center;
 `;

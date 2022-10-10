@@ -1,0 +1,49 @@
+import styled from 'styled-components';
+
+const UserCard = (props) => {
+  return (
+    <>
+      <StyledCard>
+        <div>
+          <img className="rounded-full p-7" src={props.img && props.img} />
+        </div>
+        <div className="w-full flex justify-center font-bold text-lg">
+          {props.name && props.name}
+        </div>
+        <div className="px-3 py-1">돈까스 맛집 제가 잘 알고 있습니다.</div>
+      </StyledCard>
+    </>
+  );
+};
+
+export default UserCard;
+
+const StyledCard = styled.div`
+  cursor: pointer;
+  margin: 15px;
+  border-radius: 10px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #eaecee;
+  background-color: #feeefd;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  position: relative;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  max-width: ${window.innerWidth / 10};
+  transition: 250ms transform;
+  user-select: none;
+  &:hover {
+    transform: scale(1.04);
+    transition: 500ms;
+  }
+`;
+
+const StyledDetail = styled.div`
+  width: 100%;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 30px;
+`;
