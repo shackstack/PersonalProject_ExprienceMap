@@ -12,7 +12,7 @@ const MainPage = () => {
         <div className="w-full flex justify-center p-3 text-xl text-[#b1aeae]">
           "나의 맛집 기록해 보세요"
         </div>
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           <Link to="/스윙스">
             <UserCard img={Moon} name={'스윙스'} />
           </Link>
