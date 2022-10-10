@@ -68,7 +68,7 @@ const KakaoMap = () => {
       <Map
         level={8}
         center={{ lat: 37.541, lng: 126.986 }}
-        style={{ height: '50vh', borderRadius: '10px', padding: '10' }}
+        style={{ height: '20rem', borderRadius: '10px', padding: '10' }}
       >
         {data.map((place, idx) => {
           return (
