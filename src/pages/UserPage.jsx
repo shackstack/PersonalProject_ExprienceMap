@@ -49,7 +49,7 @@ const UserPage = () => {
       <Container>
         <Navbar />
         <div className="w-full flex flex-col justify-center ">
-          <div className="w-full flex justify-center p-3 text-xl text-[#b1aeae]">
+          <div className="w-full flex justify-center p-2 text-xl text-[#b1aeae]">
             "마커를 클릭해보세요"
           </div>
           <div className=" px-12 lg:px-16 xl:px-20 2xl:px-24">

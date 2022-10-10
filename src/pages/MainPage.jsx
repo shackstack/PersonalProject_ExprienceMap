@@ -9,7 +9,7 @@ const MainPage = () => {
     <Layout>
       <Container>
         <Navbar />
-        <div className="w-full flex justify-center p-3 text-xl text-[#b1aeae]">
+        <div className="w-full flex justify-center p-2 text-xl text-[#b1aeae]">
           "나의 맛집 기록해 보세요"
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">

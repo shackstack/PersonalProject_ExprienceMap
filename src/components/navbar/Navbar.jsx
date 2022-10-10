@@ -13,24 +13,29 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <Logo />
-      <div className="w-full flex justify-end">
-        <button onClick={() => navigate('/스윙스/create')} className="text-xl text-[#a19d9d] px-10">
-          깃발 꽂기
-        </button>
-        <button onClick={() => onClickModalOpen()} className="text-xl text-[#a19d9d] px-10">
-          로그인
-        </button>
+      <div className="flex justify-between">
+        <Logo />
+        <div className="my-4">
+          <button
+            onClick={() => navigate('/스윙스/create')}
+            className="text-lg text-[#a19d9d] px-5"
+          >
+            깃발 꽂기
+          </button>
+          <button onClick={() => onClickModalOpen()} className="text-lg text-[#a19d9d] px-5">
+            로그인
+          </button>
+        </div>
       </div>
       {modalState && (
         <Modal
           onConfirm={() => setModalState(false)}
           children={
-            <div className="">
+            <div className="flex flex-col">
               <div className="absolute inset-x-0 top-10">
                 <Logo></Logo>
               </div>
-              <button className="mt-40">
+              <button className="">
                 <img src={KakaoLoginImg} />
               </button>
               <button
