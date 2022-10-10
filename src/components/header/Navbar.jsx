@@ -3,16 +3,21 @@ import Modal from 'components/modal/Modal';
 import { useState } from 'react';
 import Logo from './Logo';
 import KakaoLoginImg from 'assets/KakaoLogin.png';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [modalState, setModalState] = useState(false);
   const onClickModalOpen = () => {
     modalState ? setModalState(false) : setModalState(true);
   };
+  const navigate = useNavigate();
   return (
     <div>
       <Logo />
       <div className="w-full flex justify-end">
+        <button onClick={() => navigate('/스윙스/create')} className="text-xl text-[#a19d9d] px-10">
+          깃발 꽂기
+        </button>
         <button onClick={() => onClickModalOpen()} className="text-xl text-[#a19d9d] px-10">
           로그인
         </button>
