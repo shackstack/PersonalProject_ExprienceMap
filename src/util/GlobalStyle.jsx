@@ -23,7 +23,7 @@ export const Layout = styled.div`
   background-image: url(${Background});
   width: 100vw;
   height: 120vh;
-  min-width: 550px;
+  min-width: 420px;
   display: flex;
   justify-content: center;
 `;
